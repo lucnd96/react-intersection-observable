@@ -3,7 +3,8 @@
   "author": "lucnd96",
   "license": "MIT",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "main": "src/index.ts",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm",
     "lint": "eslint src/**/*.{ts,tsx}",
@@ -18,7 +19,7 @@
   },
   "exports": {
     ".": {
-      "default": "./src",
+      "default": "./src/index.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     }
