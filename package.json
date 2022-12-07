@@ -1,16 +1,27 @@
 {
-  "name": "react-intersection-observable",
+  "name": "@lucnd96/react-intersection-observable",
   "author": "lucnd96",
   "license": "MIT",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.2",
   "scripts": {
-    "build": "tsc",
+    "build": "tsup src/index.ts --format cjs,esm",
     "lint": "eslint src/**/*.{ts,tsx}",
     "lint:fix": "eslint src/**/.{ts,tsx} --fix"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucnd96/react-intersection-observable.git"
+  },
   "dependencies": {
     "react": "^17.0.0"
+  },
+  "exports": {
+    ".": {
+      "default": "./src",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
   },
   "devDependencies": {
     "@types/enzyme": "^3.10.12",
@@ -27,6 +38,7 @@
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4",
     "jsdom": "^20.0.3",
+    "tsup": "^6.5.0",
     "typescript": "^4.3.2",
     "vite": "^3.2.4",
     "vitest": "^0.25.3"
