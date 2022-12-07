@@ -62,5 +62,5 @@ module.exports = {
     JSX: true,
     location: true,
   },
-  ignorePatterns: ["src/**/*.json", "src/*.css", "src/**/*.svg"],
+  ignorePatterns: ["src/**/*.json", "src/*.css", "src/**/*.svg", "dist/**/*"],
 };
