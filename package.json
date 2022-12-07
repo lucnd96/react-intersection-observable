@@ -3,7 +3,7 @@
   "author": "lucnd96",
   "license": "MIT",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm",
     "lint": "eslint src/**/*.{ts,tsx}",
