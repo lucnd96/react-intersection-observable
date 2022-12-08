@@ -4,7 +4,7 @@
   "license": "MIT",
   "keywords": ["react intersection observer", "intersection observer", "react", "react intersection observable"],
   "private": false,
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "src/index.ts",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm",
@@ -15,14 +15,14 @@
     "type": "git",
     "url": "https://github.com/lucnd96/react-intersection-observable.git"
   },
-  "dependencies": {
-    "react": "^17.0.0"
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0"
   },
   "exports": {
     ".": {
-      "default": "./src/index.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "require": "./dist/index.js",
+      "default": "./src/index.ts"
     }
   },
   "devDependencies": {

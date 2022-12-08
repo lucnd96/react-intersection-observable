@@ -69,8 +69,7 @@ var IntersectionObservable = (props) => {
 
 // src/hooks/useIntersectionObservable.ts
 var import_react2 = require("react");
-function useIntersectionObservable(args) {
-  const { options } = args;
+function useIntersectionObservable(options) {
   const [isVisible, setIsVisible] = (0, import_react2.useState)(false);
   const [entry, setEntry] = (0, import_react2.useState)();
   const [observer, setObserver] = (0, import_react2.useState)();
