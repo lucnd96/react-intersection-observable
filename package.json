@@ -3,12 +3,12 @@
   "author": "lucnd96",
   "license": "MIT",
   "private": false,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "src/index.ts",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm",
     "lint": "eslint src/**/*.{ts,tsx}",
-    "lint:fix": "eslint src/**/.{ts,tsx} --fix"
+    "lint:fix": "eslint src/**/*.{ts,tsx} --fix"
   },
   "repository": {
     "type": "git",
@@ -25,13 +25,11 @@
     }
   },
   "devDependencies": {
-    "@types/enzyme": "^3.10.12",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^5.45.1",
     "@typescript-eslint/parser": "^5.45.1",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
-    "enzyme": "^3.11.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
