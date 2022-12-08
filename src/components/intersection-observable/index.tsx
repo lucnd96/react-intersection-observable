@@ -1,4 +1,4 @@
-/* eslint-disable consistent-return,no-underscore-dangle,consistent-return,no-undef */
+/* eslint-disable consistent-return,no-underscore-dangle,consistent-return,no-undef,react/jsx-props-no-spreading */
 import React, { useRef, useEffect, useState } from "react";
 
 type IntersectionObservableCallbackArgs = {
@@ -7,7 +7,7 @@ type IntersectionObservableCallbackArgs = {
   observer: IntersectionObserver
 }
 type IntersectionObservableCallback = (args: IntersectionObservableCallbackArgs) => unknown;
-interface IIntersectionObservableProps {
+interface IIntersectionObservableProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "onChange">{
   visibleClassName?: string;
   hiddenClassName?: string;
   options?: IntersectionObserverInit;
@@ -20,6 +20,8 @@ const IntersectionObservable: React.ComponentType<IIntersectionObservableProps> 
     hiddenClassName,
     options = {},
     onChange,
+    className,
+    ...restProps
   } = props;
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -42,7 +44,8 @@ const IntersectionObservable: React.ComponentType<IIntersectionObservableProps> 
 
   return (
     <div
-      className={isVisible ? visibleClassName : hiddenClassName}
+      {...restProps}
+      className={`${className} ${isVisible ? visibleClassName : hiddenClassName}`}
       ref={containerRef}
     >
       {children}

@@ -4,7 +4,7 @@
   "license": "MIT",
   "keywords": ["react intersection observer", "intersection observer", "react", "react intersection observable"],
   "private": false,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "src/index.ts",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm",

@@ -6,7 +6,9 @@ var IntersectionObservable = (props) => {
     visibleClassName,
     hiddenClassName,
     options = {},
-    onChange
+    onChange,
+    className,
+    ...restProps
   } = props;
   const containerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -27,7 +29,8 @@ var IntersectionObservable = (props) => {
   return /* @__PURE__ */ React.createElement(
     "div",
     {
-      className: isVisible ? visibleClassName : hiddenClassName,
+      ...restProps,
+      className: `${className} ${isVisible ? visibleClassName : hiddenClassName}`,
       ref: containerRef
     },
     children
