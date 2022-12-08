@@ -52,3 +52,4 @@ const IntersectionObservable: React.ComponentType<IIntersectionObservableProps> 
 
 export default IntersectionObservable;
 export { IntersectionObservable };
+export type { IntersectionObservableCallback, IIntersectionObservableProps };

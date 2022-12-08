@@ -1,18 +1,13 @@
 /* eslint-disable consistent-return,no-underscore-dangle,consistent-return,no-undef */
 import React, { useState, useEffect, useRef } from "react";
 
-interface IUseIntersectionObservableArgs {
-  options?: IntersectionObserverInit;
-}
-
 interface IUseIntersectionObservableReturnValue<T> {
   isVisible: boolean,
   entry?: IntersectionObserverEntry,
   observer?: IntersectionObserver,
   ref: React.RefObject<T>;
 }
-function useIntersectionObservable<T extends Element>(args: IUseIntersectionObservableArgs): IUseIntersectionObservableReturnValue<T> {
-  const { options } = args;
+function useIntersectionObservable<T extends Element>(options?: IntersectionObserverInit): IUseIntersectionObservableReturnValue<T> {
   const [isVisible, setIsVisible] = useState(false);
   const [entry, setEntry] = useState<IntersectionObserverEntry>();
   const [observer, setObserver] = useState<IntersectionObserver>();
